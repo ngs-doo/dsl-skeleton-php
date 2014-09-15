@@ -1,0 +1,16 @@
+{
+    "name": "dsl-platform/dsl-skeleton",
+    "license": "BSD-3-Clause",
+    "type": "project",
+    "require": {
+        "dsl-platform/dsl-admin-php": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": "PhpDslAdmin\\Installer::install",
+        "post-update-cmd": "PhpDslAdmin\\Installer::install",
+        "post-root-package-install": "PhpDslAdmin\\Installer::install"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}
