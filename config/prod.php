@@ -7,9 +7,6 @@ $app->register(new \Silex\Provider\FormServiceProvider());
 $app->register(new \Silex\Provider\ValidatorServiceProvider());
 $app->register(new \Silex\Provider\TranslationServiceProvider());
 $app->register(new \Silex\Provider\SessionServiceProvider());
-$app['message'] = $app->share(function() use ($app) {
-    return new \NGS\Service\MessageService($app['session']);
-});
 
 $app['dsl.source.forms'] = function() { return require __DIR__.'/../Generated-PHP-UI/ModulesForms.php'; };
 $app['ngs.form.typemap'] = $app->share(function() use ($app) {
@@ -53,7 +50,6 @@ $app['twig.options'] = array('cache' => __DIR__.'/../var/cache/twig');
 
 $app['crud.controller'] = $app->share(function() use ($app) {
     $controller = new \PhpDslAdmin\CrudController($app);
-    $controller->setTwigNamespace('');
     return $controller;
 });
 $crudProvider = new \PhpDslAdmin\CrudControllerProvider();

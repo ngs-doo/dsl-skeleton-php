@@ -1,7 +1,9 @@
 {
     "name": "dsl-platform/dsl-skeleton",
+    "description": "PHP skeleton application",
     "license": "BSD-3-Clause",
     "type": "project",
+    "minimum-stability": "dev",
     "require": {
         "dsl-platform/dsl-admin-php": "dev-master"
     },
@@ -11,6 +13,12 @@
         "post-root-package-install": "PhpDslAdmin\\Installer::install"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": {
+            "": [
+                "src/",
+                "Generated-PHP/",
+                "Generated-PHP-UI/"
+            ]
+        }
     }
 }
