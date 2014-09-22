@@ -5,12 +5,20 @@
     "type": "project",
     "minimum-stability": "dev",
     "require": {
-        "dsl-platform/dsl-admin-php": "dev-master"
+        "dsl-platform/admin": "@dev",
+        "dsl-platform/dsl-symfony": "@dev",
+        "dsl-platform/client": "@dev",
+        "dsl-platform/install": "@dev",
+        "igorw/config-service-provider": "~1.2.0@stable"
     },
     "scripts": {
-        "post-install-cmd": "PhpDslAdmin\\Installer::install",
-        "post-update-cmd": "PhpDslAdmin\\Installer::install",
-        "post-root-package-install": "PhpDslAdmin\\Installer::install"
+        "post-install-cmd": "DslPlatform\\Installer::install",
+        "post-update-cmd": "DslPlatform\\Installer::install",
+        "dsl": "DslPlatform\\Installer::install",
+        "dsl_revenj": "DslPlatform\\Installer::installRevenj",
+        "dsl_compile": "DslPlatform\\Installer::compile",
+        "dsl_migrate": "DslPlatform\\Installer::migrate",
+        "dsl_start": "DslPlatform\\Installer::start"
     },
     "autoload": {
         "psr-4": {

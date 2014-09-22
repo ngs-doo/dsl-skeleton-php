@@ -1,0 +1,13 @@
+{
+    "clc_path": ".\/dsl-clc.jar",
+    "clc_url": "https:\/\/github.com\/ngs-doo\/dsl-compiler-client\/releases\/download\/0.9.8\/dsl-clc.jar",
+    "db_server": "localhost",
+    "db_port": "5432",
+    "db_database": "skeleton",
+    "db_user": "revenj",
+    "db_password": "revenj",
+    "dsl_path": ".\/dsl",
+    "php_url": "localhost:9124",
+    "revenj_path": ".\/revenj",
+    "revenj_url": "http:\/\/localhost:9123"
+}

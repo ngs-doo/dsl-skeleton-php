@@ -5,14 +5,13 @@ use Silex\Provider\WebProfilerServiceProvider;
 
 \Symfony\Component\Debug\Debug::enable();
 
-require __DIR__.'/prod.php';
+require __DIR__ . '/common.php';
 
 $app['debug'] = true;
 
-$app['twig.options'] = array(
-    'cache' => false,
-);
-$client = new \NGS\Client\RestHttp('http://localhost:8999/', 'revenj', 'revenj');
+$app['twig.options'] = array('cache' => false);
+
+$client = new \NGS\Client\RestHttp('http://localhost:9123/', 'revenj', 'revenj');
 \NGS\Client\RestHttp::instance($client);
 $app['dsl.client'] = $app->share(function() use ($client) {
     return $client;
