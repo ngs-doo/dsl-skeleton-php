@@ -1,7 +1,7 @@
 <?php
 // router for PHP built-in web server, replaces rewrite rules
 
-$staticAlias = realpath(__DIR__.'/../vendor/dsl-platform/dsl-admin-php/public');
+$staticAlias = realpath(__DIR__.'/../vendor/dsl-platform/admin/public');
 
 if (isset($_SERVER['REQUEST_URI']))
     $uri = $_SERVER['REQUEST_URI'];

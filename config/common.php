@@ -37,7 +37,7 @@ $app['form.extensions'] = $app->share($app->extend('form.extensions', function (
 $app['twig.path'] = array(
     realpath(__DIR__.'/../templates'),
     realpath(__DIR__.'/../Generated-PHP-UI'),
-    realpath(__DIR__.'/../vendor/dsl-platform/dsl-admin-php/templates'),
+    realpath(__DIR__.'/../vendor/dsl-platform/admin/templates'),
 );
 
 $twigNamespace = 'dsl_gen';
